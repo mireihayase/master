@@ -1,0 +1,46 @@
+    <div class="form-signin">
+      <h2 class="form-signin-heading">違う切り口</h2>
+      <h3>問題解決</h3>
+      <div class="  rand">
+       <%= @issue.text %>
+     </div>
+     <div class="form-signin">
+      <h3>身近に感じた課題</h3>
+      <!-- ここだけthink_contentテーブルに保存 -->
+   <%=  form_tag('/ideas/show', :method => :post) do %>
+     <input type="text" class="nyuuryoku" placeholder="気軽に書いてね" name= "text">
+     <input type="submit" class="btn btn-large btn-success migiyose" value="投稿する"><br>
+   <% end %>
+    </div>
+    <br>
+    <h3>未来予測~5年後はどうなるか</h3><br>
+
+    <h3>ターゲットを変える</h3>
+    <div class="  rand">
+     <%= @target.text %>
+   </div>  
+   <%= link_to '変更', '/ideas/show', :class => "btn btn-large btn-success migiyose" %> <br>
+   <h3>ビジネスモデルを変える</h3>
+   <div class="  rand">
+     <%= @bzm.text%>
+   </div> <%= link_to '変更', '/ideas/show', :class => "btn btn-large btn-success migiyose" %> <br>
+ </div>
+
+
+ <div class=" form-signin clearfix ">
+   <%= form_for(@idea) do |f|%>
+   <h2 class="form-signin-heading clearfix ">思いついたもの</h2>
+   <h3>サービス名</h3>
+   <%= f.text_area :name,  class: 'nyuuryoku' %>
+   <h3>概要</h3>
+   <%= f.text_area :outline, class: 'nyuuryoku' %>
+   <h3>提供価値</h3>
+   <%= f.text_area :value, class: 'nyuuryoku' %>
+   <%= f.submit "送信", class: "btn btn-large btn-success migiyose" %>
+   <% end %>
+ </div>
+
+
+ <hr>
+    <a class="btn btn-large btn-success" href="/ideas/show">次のサービスを入力</a>
+    <a class="btn btn-large btn-success migiyose" href="/top/show">今日考えたもの一覧</a>

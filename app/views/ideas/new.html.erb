@@ -1,0 +1,43 @@
+ <div class=" form-signin clearfix ">
+    <h3>アナロジーで考える</h3>
+      <div class="col hidariyose">
+        <h3>良いところ</h3>
+      <div class=" col  rand">
+        <%= @ksf.text %>
+      </div>
+        <%= link_to '変更', '/ideas/new', :class => "btn btn-large btn-success migiyose" %> <br>
+       <!-- <a class="btn btn-large btn-success migiyose" href="/ideas/new">変更</a><br> -->
+   
+     </div>
+         <div class=" col kakeru">×</div>
+       <div class="col migiyose">
+        <h3>市場</h3>
+        <div class=" col rand">
+        <%= @market.text %>
+        </div>
+        <%= link_to '変更', '/ideas/new', :class => "btn btn-large btn-success migiyose" %> <br>
+           </div>
+
+      </div>
+
+
+
+
+
+    <div class=" form-signin clearfix ">
+     <%= form_for(@idea) do |f|%>
+        <h2 class="form-signin-heading clearfix ">思いついたもの</h2>
+        <h3>サービス名</h3>
+        <%= f.text_area :name,  class: 'nyuuryoku clearfix' %>
+        <h3>概要</h3>
+        <%= f.text_area :outline, class: 'nyuuryoku clearfix' %>
+        <h3>提供価値</h3>
+        <%= f.text_area :value, class: 'nyuuryoku' %>
+        <%= f.submit "送信", class: "btn btn-large btn-success migiyose" %><br>
+     <% end %>
+    </div>
+
+<br>
+<br>
+        <a class="btn btn-large btn-success" href="/ideas/show">次のアイデアを入力</a>
+        <a class="btn btn-large btn-success migiyose" href="/ideas/show">違う切り口</a>

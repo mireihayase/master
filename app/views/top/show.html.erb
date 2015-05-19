@@ -1,0 +1,24 @@
+      <form class="form-signin">
+        <h2 class="form-signin-heading">今日考えたサービス</h2>
+<hr>
+      <% @user.ideas.each do |idea| %>  
+     
+        <h3>サービス名</h3> 
+           <div class="  rand">
+              <%= idea.name %> 
+           </div>  
+        <h3>概要</h3>
+             <div class="  rand">
+             <%= idea.outline %>
+             </div>  
+        <h3>提供価値</h3>
+             <div class="  rand">
+             <%= idea.value %>
+             </div>  
+  <hr>
+      <% end %>
+
+        <label class="checkbox">
+        </label>
+      </form>
+      <!-- くり返し　 部分テンプレートにしたい -->

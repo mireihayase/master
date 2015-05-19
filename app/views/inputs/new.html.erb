@@ -1,0 +1,22 @@
+
+<div class="container-narrow">
+
+    <div class="form-signin">
+        <%=form_for (@input) do |f|  %>
+        <h2 class="form-signin-heading">今日見つけたサービス</h2>
+        <h3>サービス名</h3>
+        <%= f.text_area :name, class: 'nyuuryoku' %>
+        <h3>解決する問題</h3>
+        <%= f.text_area :issue, class: 'nyuuryoku' %>
+        <h3>良いところ</h3>
+        <%= f.text_area :ksf,  class: 'nyuuryoku' %>
+        <%=f.submit "送信", class: "btn btn-large btn-success migiyose" %><br>
+        <% end %>
+    </div>
+
+    <hr>
+    <a class="btn btn-large btn-success" href="/inputs/new">次のサービスを入力</a>
+    <a class="btn btn-large btn-success migiyose" href="/ideas/new">ブレストを始める</a>
+
+</div>
+</div>
