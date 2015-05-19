@@ -50,6 +50,7 @@ group :development, :test do
   gem 'devise'
 
   gem 'rails_12factor'
-
+  gem 'mysql2'
+  
 end
 
