@@ -8,16 +8,18 @@
           <div class="nyuuryoku"><%= f.label :email %>
           <%= f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力' %></div>
 
+          <div class="nyuuryoku"><%= f.label :nickname %>
+            <%= f.text_field :nickname, maxlength: "6", :placeholder => 'ニックネームを入力' %>
+          </div>
+
           <div class="nyuuryoku"><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
             <%= f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力' %></div>
 
           <div class="nyuuryoku"><%= f.label :password_confirmation %>
             <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => 'パスワードを入力（確認）' %></div>
 
-          <div class="">
-              <div class="">
                 <%= f.submit class: "btn btn-large btn-success"%>
-              </div></div>
+            
 
   <div class="">
     <strong>すでにアカウントを持っていますか？</strong><br>

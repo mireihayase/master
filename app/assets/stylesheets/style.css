@@ -6,9 +6,10 @@
 
 .rand {
   display: block;
-  width: 100%;
+  /*width: 230px;*/
   min-height: 60px;
-  font-size:40px;
+  font-size:30px;
+  text-overflow:hidden;
   text-align:center;
   margin:0 auto;
   padding:5px;
@@ -33,9 +34,9 @@
   margin: 0 auto;
   padding-top:125px;
 }
-.col {
+/*.col {
   width:33.3333%;
-}
+}*/
       body {
         padding-top: 20px;
         padding-bottom: 40px;
